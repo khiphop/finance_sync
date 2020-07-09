@@ -1,0 +1,10 @@
+stages:
+  - deploy
+deploy:
+    stage: deploy
+    script:
+      - deploy "Business/university/financesync" "financesync"
+    only:
+      ['master']
+    tags:
+      - unifinancesync
